@@ -1,0 +1,114 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="default.Master.cs" Inherits="online_Book_System.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="Styles/Site.css" rel="stylesheet" type="text/css" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <style type="text/css">
+        #Form1
+        {
+            height: 858px;
+            width: 1109px;
+        }
+        
+
+        .auto-style2 {
+            position: relative;
+            margin: 0px;
+            padding: 0px;
+            background: #4b6c9e;
+            width: 100%;
+            top: 0px;
+            left: 2px;
+            height: 829px;
+        }
+        .auto-style3 {
+            width: 100px;
+            height: 21px;
+        }
+        </style>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="page">
+            <div class="auto-style2" 
+            style="background-color: #011724; ">
+                <div class="title">
+                <h1 style="background-color: #003366; width: 1087px;">
+                    <asp:Image ID="Image1" runat="server" Height="107px" ImageUrl="~/Image/w.jpg" Width="1107px" />
+                </h1>
+                <h1 align="center" style="background-color: #011724; width: 1087px; color: #FFFFFF;">
+                   Online TickEt booking</h1>
+            </div>
+                <div class="clear hideSkiplink" style="background-color: #003366">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" 
+                    EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal" 
+                    BackColor="#00CCFF"  BorderStyle="Solid" Font-Bold="True" ForeColor="White" Font-Size="15px" OnMenuItemClick="NavigationMenu_MenuItemClick">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home"/>
+                        <asp:MenuItem NavigateUrl="~/Bus.aspx" Text="Bus">
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Railway" Value="railway" NavigateUrl="~/Railway.aspx" ></asp:MenuItem>
+                        <asp:MenuItem Text="Airline" Value="Courses" NavigateUrl="~/airline_5564.aspx">
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Contact Us" Value="contactus" NavigateUrl="~/contact.aspx">
+                            
+                        </asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            &nbsp;</div>
+
+                <div style="width: 188px; float: left;">
+            <table  
+    style=" width: 154px; color: #FFFFFF; background-color: #011724; font-weight: bold;" 
+    border="1">
+    <tr>
+        <td class="auto-style3">
+            <asp:HyperLink ID="HyperLink1" runat="server" Width="170px" 
+                Font-Underline="False" Font-Bold="True" ForeColor="White" 
+                Font-Names="Mangal" Font-Size="20px">Services</asp:HyperLink></td>
+    </tr>
+    <tr>
+        <td style="width: 100px">
+            <asp:HyperLink ID="HyperLink2" runat="server" Width="168px" 
+                Font-Underline="False" Font-Bold="True" ForeColor="White" 
+                Font-Names="Mangal" NavigateUrl="~/check_bus.aspx">Check Bus Ticket</asp:HyperLink></td>
+    </tr>
+    <tr>
+        <td style="width: 100px">
+            <asp:HyperLink ID="HyperLink5" runat="server" Width="169px" 
+                Font-Underline="False" Font-Bold="True" ForeColor="White" 
+                Font-Names="Mangal" NavigateUrl="~/checkRailway.aspx">Check Railway Ticket</asp:HyperLink></td>
+    </tr>
+
+    <tr>
+        <td style="width: 100px">
+            <asp:HyperLink ID="HyperLink9" runat="server" Width="168px" 
+                Font-Underline="False" Font-Bold="True" ForeColor="White" 
+                Font-Names="Mangal" NavigateUrl="~/check airline.aspx">Check Airline Ticket</asp:HyperLink></td>
+    </tr>
+</table></div>
+                <div class="main" style="float: right">
+
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+                </div>
+
+            </div>
+            
+        </div>
+
+         <div class="footer">
+        <h2 style="text-align:center">Copyright &copy; Online Ticket Booking System..</h2>
+        
+    </div>
+    </form>
+</body>
+</html>
